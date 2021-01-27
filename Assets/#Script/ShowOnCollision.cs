@@ -16,14 +16,15 @@ public class ShowOnCollision : MonoBehaviour {
         showObject.SetActive(false);
     }
     
-
     void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == targetObjectName01) {
+            Debug.Log("go-ru1");
             showObject.SetActive(true);
-        }else {
-            if(collision.gameObject.name == targetObjectName02) {
-                showObject.SetActive(true);
-            }
-        }
+        } 
+        if(collision.gameObject.name == targetObjectName02) {
+            Debug.Log("go-ru2");
+            showObject.SetActive(true);
+        } 
+
     }
 }
